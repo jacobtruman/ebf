@@ -1,7 +1,7 @@
 <?
 $toc_items = array(
-	array('title'=>'Document Warehouse', 'desc'=>'Click here to Upload and View documents', 'icon'=>'ui-icon-document', 'enabled'=>true),
-	array('title'=>'Business Plan Questionnaire', 'desc'=>'Click here to open Questionnaire', 'icon'=>'ui-icon-note', 'enabled'=>true),
+	array('title'=>'Document Warehouse', 'desc'=>'Click here to Upload and View documents', 'icon'=>'ui-icon-document', 'enabled'=>true, 'href'=>'docs.php'),
+	array('title'=>'Business Plan Questionnaire', 'desc'=>'Click here to open Questionnaire', 'icon'=>'ui-icon-note', 'enabled'=>true, 'href'=>'questionnaire.php?qid=1'),
 	array('title'=>'Entity Formation Questionnaire', 'desc'=>'Click here to open Questionnaire', 'icon'=>'ui-icon-note', 'enabled'=>true),
 	array('title'=>'Website Questionnaire', 'desc'=>'Click here to open Questionnaire', 'icon'=>'ui-icon-note', 'enabled'=>false),
 	array('title'=>'Personal Credit', 'desc'=>'Click here to access your Credit Profile', 'enabled'=>true),
@@ -26,7 +26,7 @@ $default_icon = 'ui-icon-bullet';
 <ul id="toc">
 	<?
 		foreach($toc_items as $item) {
-			echo "<li".(!$item['enabled'] ? " class='ui-state-disabled'" : '')."><a href='#'><span class='ui-icon ".($item['icon'] ? $item['icon'] : $default_icon)."'></span>".$item['title']."</a></li>\n";
+			echo "<li".(!$item['enabled'] ? " class='ui-state-disabled'" : '')."><a href='".$item['href']."'><span class='ui-icon ".($item['icon'] ? $item['icon'] : $default_icon)."'></span>".$item['title']."</a></li>\n";
 		}
 	/*
 	<li><a href="#"><span class="ui-icon ui-icon-zoomout"></span>Contact</a></li>

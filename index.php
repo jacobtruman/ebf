@@ -43,7 +43,7 @@
 		<div id="nav_content" class="page">
 		<div id="navmenu">Main Menu</div>
 		<ul class="nav">
-		<li><a href="http://www.emergencybusinessfunding.com/index.php" id="selected">Home</a></li>
+		<li><a href="http://trucraft.net/ebf/index.php" id="selected">Home</a></li>
 		<li><a href="http://www.emergencybusinessfunding.com/how-it-works.php">How It Works</a></li>
 		<li><a href="http://www.emergencybusinessfunding.com/our-services.php">Our Services</a></li>
 		<li><a href="http://www.emergencybusinessfunding.com/about-us.php">About Us</a></li>
