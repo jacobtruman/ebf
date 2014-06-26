@@ -11,8 +11,7 @@
 		});
 	});
 
-	$(function()
-	{
+	$(function() {
 		$("form").form();
 	});
 </script>
@@ -91,10 +90,7 @@ if(isset($_REQUEST['qid'])) {
 		echo "<form action='' method='post' id='questionnaire_form'>\n";
 		// get all questions for selected questionnaire
 		foreach($q->questions as $question) {
-			echo "<p class='question'>\n";
-			echo "<label for='question_".$question->id."'>".$question->question."</label>\n";
-			echo $question->getInputType()."\n";
-			echo "</p>\n";
+			echo $question->getQuestionField();
 		}
 		echo "</form>\n";
 	} else {

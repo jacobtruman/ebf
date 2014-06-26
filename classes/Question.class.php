@@ -80,6 +80,14 @@ class Question
 		}
 		return $ret_val;
 	}
+
+	public function getLabel() {
+		return "<label for='question_".$this->id."'>".$this->question."</label>\n";
+	}
+
+	public function getQuestionField() {
+		return  "<p class='question'>\n".$this->getLabel()."\n".$this->getInputType()."\n</p>\n";
+	}
 }
 
 ?>
