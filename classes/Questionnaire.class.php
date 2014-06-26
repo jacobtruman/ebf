@@ -1,7 +1,5 @@
 <?php
 
-require_once("DBConn.class.php");
-
 class Questionnaire
 {
 	public $name;
@@ -33,10 +31,13 @@ class Questionnaire
 	}
 
 	private function getQuestions() {
-		$sql = "SELECT * FROM questionnaire_questions WHERE qid = '".$this->id."'";
+		$sql = "SELECT id FROM questionnaire_questions WHERE qid = '".$this->id."'";
 		$res = $this->db->query($sql);
 		while($row = $res->fetch_assoc()) {
-			$this->questions[] = $row;
+			$q = new Question($row['id']);
+			if($q->valid) {
+				$this->questions[] = $q;
+			}
 		}
 	}
 }
